@@ -75,3 +75,24 @@ html {
   background: rgba(124, 58, 237, 0.3);
   color: white;
 }
+
+/* Film and series detail poster: fixed ratio, no black bars. */
+.movie-detail-poster {
+  width: clamp(10rem, 21vw, 18rem);
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #050b15;
+}
+.movie-detail-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 760px) {
+  .movie-detail-poster {
+    width: 10rem;
+    margin-inline: auto;
+  }
+}
